@@ -1,0 +1,31 @@
+USE DATABASE UDACITY_DA_ND_PROJECT2;
+
+
+put file:///d/yelp_dataset/yelp_academic_dataset_user.json @json_stage;
+create or replace table USER (json_data  variant );
+copy into USER from  @json_stage/yelp_academic_dataset_user.json.gz on_error = 'skip_file';
+
+
+put file:///d/yelp_dataset/yelp_academic_dataset_business.json @json_stage;
+create or replace table BUSINESS (json_data  variant );
+copy into BUSINESS from  @json_stage/yelp_academic_dataset_business.json.gz on_error = 'skip_file';
+
+
+put file:///d/yelp_dataset/yelp_academic_dataset_checkin.json @json_stage;
+create or replace table CHECKIN (json_data  variant );
+copy into CHECKIN from  @json_stage/yelp_academic_dataset_checkin.json.gz on_error = 'skip_file';
+
+
+put file:///d/yelp_dataset/yelp_academic_dataset_covid_features.json @json_stage;
+create or replace table COVID_FEATURES (json_data  variant );
+copy into COVID_FEATURES from  @json_stage/yelp_academic_dataset_covid_features.json.gz on_error = 'skip_file';
+
+
+put file:///d/yelp_dataset/yelp_academic_dataset_review.json @json_stage;
+create or replace table REVIEW (json_data  variant );
+copy into REVIEW from  @json_stage/yelp_academic_dataset_review.json.gz on_error = 'skip_file';
+
+
+put file:///d/yelp_dataset/yelp_academic_dataset_tip.json @json_stage;
+create or replace table TIP (json_data  variant );
+copy into TIP from  @json_stage/yelp_academic_dataset_tip.json.gz on_error = 'skip_file';

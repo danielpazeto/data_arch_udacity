@@ -1,0 +1,9 @@
+File/Table storage    	Raw files       Staging tables      ODS tables
+business.json           124 MB           11 MB               10 MB
+review.json             6,9 GB          1,9 GB              1,9 GB
+user.json               3,7 GB          1,8 GB              1,9 GB
+checkin.json            398 MB           80 MB               90 MB
+tip.json                230 MB           46 MB               40 MB
+covid.json               64 MB            5 MB                5 MB
+temperature.csv         917 KB          209 KB              134 KB
+precipitation.csv       653 KB          146 KB               88 KB
